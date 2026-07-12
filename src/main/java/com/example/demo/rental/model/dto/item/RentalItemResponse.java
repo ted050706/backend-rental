@@ -1,4 +1,4 @@
-//* L25-6: 建立 RentalItemResponse DTO 所需欄位，用於封裝 租賃物品回應 的資訊。
+// L25-6: 建立 RentalItemResponse DTO 所需欄位，用於封裝 租賃物品回應 的資訊。
 package com.example.demo.rental.model.dto.item;
 
 import java.math.BigDecimal;
