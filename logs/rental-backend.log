@@ -1,1 +1,18 @@
 2026-07-12T14:37:50.665+08:00  WARN 19332 --- [backend-rental] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h35m56s973ms388µs700ns).
+2026-07-12T16:09:36.619+08:00  INFO 19332 --- [backend-rental] [RMI TCP Connection(5457)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-07-12T16:09:36.850+08:00  INFO 19332 --- [backend-rental] [RMI TCP Connection(5457)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-12T16:09:37.448+08:00  INFO 19332 --- [backend-rental] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-12T16:09:37.459+08:00 ERROR 19332 --- [backend-rental] [http-nio-8080-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:203) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:383) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:407) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:535) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:70) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:127) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-07-12T16:09:37.662+08:00  INFO 19332 --- [backend-rental] [RMI TCP Connection(5457)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-12T16:09:37.720+08:00  INFO 19332 --- [backend-rental] [RMI TCP Connection(5457)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-12T16:09:37.742+08:00  INFO 19332 --- [backend-rental] [RMI TCP Connection(5457)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
