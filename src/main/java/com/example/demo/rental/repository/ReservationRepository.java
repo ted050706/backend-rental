@@ -1,3 +1,4 @@
+// L24-9: 建立 ReservationRepository 介面，繼承 JpaRepository，提供對 Reservation 實體的 CRUD 操作和自訂查詢方法。
 package com.example.demo.rental.repository;
 
 import java.time.LocalDateTime;

@@ -1,3 +1,4 @@
+// L24-5: 建立 Reservation 實體類別，對應資料庫中的 reservation 表格，並使用 Jakarta Persistence 註解進行欄位映射。
 package com.example.demo.rental.model.entity;
 
 import java.math.BigDecimal;
@@ -53,7 +54,8 @@ public class Reservation {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false, length = 30)
-	private ReservationStatus status = ReservationStatus.PENDING;
+	/* 需另外在 /model/enums/ReservationStatus.java [enum] 定義 PENDING、APPROVED、REJECTED、CANCELLED 和 FINISHED 狀態 */
+	private ReservationStatus status = ReservationStatus.PENDING; 
 	
 	@Column(length = 500)
 	private String note;

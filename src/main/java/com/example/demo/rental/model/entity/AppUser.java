@@ -1,3 +1,4 @@
+// L24-1: 建立 AppUser 實體類別，對應資料庫中的 app_user 表格，並使用 Jakarta Persistence 註解進行欄位映射。
 package com.example.demo.rental.model.entity;
 
 import com.example.demo.rental.model.enums.Role;
@@ -39,7 +40,7 @@ public class AppUser {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false, length = 20)
-	private Role role = Role.USER;
+	private Role role = Role.USER;  /* 需另外在 /model/enums/Role.java [enum] 定義 USER 和 ADMIN 角色 */
 	
 	@Column(nullable = false)
 	private boolean enabled = true;

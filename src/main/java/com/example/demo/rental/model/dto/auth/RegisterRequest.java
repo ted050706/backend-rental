@@ -1,3 +1,4 @@
+// L25-4: 建立 RegisterRequest DTO 所需欄位，用於封裝 使用者註冊請求 的資訊，並使用 Jakarta Bean Validation 註解進行欄位驗證。
 package com.example.demo.rental.model.dto.auth;
 
 import jakarta.validation.constraints.NotBlank;

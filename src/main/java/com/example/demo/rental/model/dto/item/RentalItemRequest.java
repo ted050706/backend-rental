@@ -1,3 +1,4 @@
+// L25-5: 建立 RentalItemRequest DTO 所需欄位，用於封裝 租賃物品請求 的資訊，並使用 Jakarta Bean Validation 註解進行欄位驗證。
 package com.example.demo.rental.model.dto.item;
 
 import java.math.BigDecimal;

@@ -1,2 +1,1 @@
-2026-07-11T03:09:46.440+08:00  WARN 19332 --- [backend-rental] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h9m18s661ms915µs900ns).
-2026-07-11T10:44:31.871+08:00  WARN 19332 --- [backend-rental] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h34m12s992ms774µs).
+2026-07-12T14:37:50.665+08:00  WARN 19332 --- [backend-rental] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h35m56s973ms388µs700ns).

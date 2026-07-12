@@ -1,3 +1,4 @@
+// L24-3: 建立 RentalItem 實體類別，對應資料庫中的 rental_item 表格，並使用 Jakarta Persistence 註解進行欄位映射。
 package com.example.demo.rental.model.entity;
 
 import java.math.BigDecimal;
@@ -47,6 +48,7 @@ public class RentalItem {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false, length = 30)
+	/* 需另外在 /model/enums/ItemStatus.java [enum] 定義 AVAILABLE 和 MAINTENANCE 狀態 */
 	private ItemStatus status = ItemStatus.AVAILABLE;
 
 }

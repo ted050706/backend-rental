@@ -1,3 +1,4 @@
+// L24-8: 建立 RentalItemRepository 介面，繼承 JpaRepository，提供對 RentalItem 實體的 CRUD 操作和自訂查詢方法。
 package com.example.demo.rental.repository;
 
 import java.util.List;
