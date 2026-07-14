@@ -1,5 +1,5 @@
 // L25-16: 建立 AddAppUser 測試類別，用於新增 應用程式使用者(AppUser) 到資料庫，並使用 Spring Boot 測試框架進行測試。
-package com.example.demo;
+package com.example.demo.test_repository;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.example.demo.rental.model.entity.AppUser;
 import com.example.demo.rental.model.enums.Role;
-import com.example.demo.rental.repository.test_repository.AppUserRepository;
+import com.example.demo.rental.repository.AppUserRepository;
 
 import jakarta.transaction.Transactional;
 

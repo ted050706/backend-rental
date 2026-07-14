@@ -1,5 +1,5 @@
 // L25-17: 建立 AddRentalItem 測試類別，用於新增 可租借項目(RentalItem) 到資料庫，並使用 Spring Boot 測試框架進行測試。
-package com.example.demo;
+package com.example.demo.test_repository;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.rental.model.entity.RentalItem;
 import com.example.demo.rental.model.enums.ItemStatus;
-import com.example.demo.rental.repository.test_repository.RentalItemRepository;
+import com.example.demo.rental.repository.RentalItemRepository;
 
 @SpringBootTest
 public class AddRentalItem {

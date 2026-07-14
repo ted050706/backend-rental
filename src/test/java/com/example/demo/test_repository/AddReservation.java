@@ -1,5 +1,5 @@
 // L25-18: 建立 AddReservation 測試類別，用於測試新增租借預約功能，使用 Spring Boot 測試框架，並自動注入所需的 Repository 物件。
-package com.example.demo;
+package com.example.demo.test_repository;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,9 +12,9 @@ import com.example.demo.rental.model.entity.AppUser;
 import com.example.demo.rental.model.entity.RentalItem;
 import com.example.demo.rental.model.entity.Reservation;
 import com.example.demo.rental.model.enums.ReservationStatus;
-import com.example.demo.rental.repository.test_repository.AppUserRepository;
-import com.example.demo.rental.repository.test_repository.RentalItemRepository;
-import com.example.demo.rental.repository.test_repository.ReservationRepository;
+import com.example.demo.rental.repository.AppUserRepository;
+import com.example.demo.rental.repository.RentalItemRepository;
+import com.example.demo.rental.repository.ReservationRepository;
 
 @SpringBootTest
 public class AddReservation {
