@@ -12,9 +12,9 @@ import com.example.demo.rental.model.entity.AppUser;
 import com.example.demo.rental.model.entity.RentalItem;
 import com.example.demo.rental.model.entity.Reservation;
 import com.example.demo.rental.model.enums.ReservationStatus;
-import com.example.demo.rental.repository.AppUserRepository;
-import com.example.demo.rental.repository.RentalItemRepository;
-import com.example.demo.rental.repository.ReservationRepository;
+import com.example.demo.rental.repository.test_repository.AppUserRepository;
+import com.example.demo.rental.repository.test_repository.RentalItemRepository;
+import com.example.demo.rental.repository.test_repository.ReservationRepository;
 
 @SpringBootTest
 public class AddReservation {

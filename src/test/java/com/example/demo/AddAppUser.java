@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.example.demo.rental.model.entity.AppUser;
 import com.example.demo.rental.model.enums.Role;
-import com.example.demo.rental.repository.AppUserRepository;
+import com.example.demo.rental.repository.test_repository.AppUserRepository;
 
 import jakarta.transaction.Transactional;
 

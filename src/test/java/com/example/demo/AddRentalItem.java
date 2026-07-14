@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.rental.model.entity.RentalItem;
 import com.example.demo.rental.model.enums.ItemStatus;
-import com.example.demo.rental.repository.RentalItemRepository;
+import com.example.demo.rental.repository.test_repository.RentalItemRepository;
 
 @SpringBootTest
 public class AddRentalItem {
