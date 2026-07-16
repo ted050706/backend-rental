@@ -1,4 +1,4 @@
-// L26-3: 建立 租用預約服務 的 CRUD 方法
+// L26-3, L27-1: 建立 租用預約服務 的 CRUD 方法
 package com.example.demo.rental.service;
 
 import java.math.BigDecimal;
@@ -159,6 +159,43 @@ public class ReservationService {
 		reservation.setStatus(ReservationStatus.CANCELED);
 		return ReservationMapper.toResponse(reservation);
 		
+	}
+	
+	/**
+	 * 核准指定預約-管理者
+	 * 
+	 * 此方法通常是給管理者使用
+	 * 只有 PENDING 狀態的預約才可以核准, 核准後變為 APPROVED
+	 * 
+	 * */
+	@Transactional
+	public ReservationResponse approve(Long id) {
+		Reservation reservation = getEntity(id);
+		if(reservation.getStatus() != ReservationStatus.PENDING) {
+			throw new BusinessException("只有 PENDING 狀態才可以核准");
+		}
+		reservation.setStatus(ReservationStatus.APPROVED);
+		return ReservationMapper.toResponse(reservation);
+		
+	}
+	
+	/**
+	 * 退回指定預約-管理者
+	 * 
+	 * 此方法通常是給管理者使用
+	 * 只有 PENDING 狀態的預約才可以退回, 退回後變為 REJECTED
+	 * 
+	 * 退回並不會刪除預約資料, 而是保留歷史紀錄
+	 * 
+	 * */
+	@Transactional
+	public ReservationResponse reject(Long id) {
+		Reservation reservation = getEntity(id);
+		if(reservation.getStatus() != ReservationStatus.PENDING) {
+			throw new BusinessException("只有 PENDING 狀態才可以退回");
+		}
+		reservation.setStatus(ReservationStatus.REJECTED);
+		return ReservationMapper.toResponse(reservation);
 	}
 	
 	private Reservation getEntity(Long id) {
