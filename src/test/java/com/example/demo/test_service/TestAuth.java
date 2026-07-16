@@ -1,4 +1,4 @@
-// L27-4: 順帶建立測試 認證與會員帳號服務 的 CRUD 方法
+// L27-4, L28-2: 順帶建立測試 認證與會員帳號服務 的 CRUD 方法
 package com.example.demo.test_service;
 
 import org.junit.jupiter.api.Test;
@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.demo.rental.model.dto.auth.LoginRequest;
+import com.example.demo.rental.model.dto.auth.LoginResponse;
 import com.example.demo.rental.model.dto.auth.RegisterRequest;
 import com.example.demo.rental.service.AuthService;
 
@@ -15,7 +17,7 @@ public class TestAuth {
 	@Autowired
 	private AuthService authService;
 	
-	@Test
+	//@Test
 	public void register() {
 		RegisterRequest request = new RegisterRequest();
 		request.setUsername("user2");
@@ -29,7 +31,43 @@ public class TestAuth {
 		} catch (Exception e) {
 			System.err.println(e);
 		}
+	}
+	
+	/**
+	 * admin/admin123
+	 * user/user123
+	 * user2/2222
+	 * */
+	//@Test
+	public void login() {
+		LoginRequest login = new LoginRequest();
+		login.setUsername("user");
+		login.setPassword("user123");
+		
+		try {
+			LoginResponse response = authService.login(login);
+			System.out.println("登入成功");
+			System.out.println("type: " + response.getTokenType());
+			System.out.println("token: " + response.getToken());
+			System.out.println("user: " + response.getUser());
+			System.out.println("fullname: " + response.getUser().getFullName());
+			System.out.println("username: " + response.getUser().getUsername());
+			System.out.println("role: " + response.getUser().getRole());
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+	}
+	
+	@Test
+	public void profile() {
+		
+		try {
+			System.out.println(authService.getProfile("admin"));
+		} catch (Exception e) {
+			System.err.println(e);
+		}
 		
 	}
+	
 	
 }
