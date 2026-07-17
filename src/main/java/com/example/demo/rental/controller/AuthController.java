@@ -19,6 +19,8 @@ import com.example.demo.rental.service.AuthService;
 import jakarta.validation.Valid;
 
 /**
+ * 登入認證 Controller
+ * 
  * 負責:
  * 1. 使用者註冊
  * 2. 使用者登入
