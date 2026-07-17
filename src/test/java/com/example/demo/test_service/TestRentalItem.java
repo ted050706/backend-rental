@@ -1,0 +1,124 @@
+// L26-2: 連帶撰寫測試檔案，可執行跟 MySQL 資料庫做 CRUD 測試，並印出結果
+package com.example.demo.test_service;
+
+import java.math.BigDecimal;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.demo.rental.exception.ResourceNotFoundException;
+import com.example.demo.rental.model.dto.item.RentalItemRequest;
+import com.example.demo.rental.model.dto.item.RentalItemResponse;
+import com.example.demo.rental.model.enums.ItemStatus;
+import com.example.demo.rental.service.RentalItemService;
+
+import jakarta.transaction.Transactional;
+
+@SpringBootTest
+public class TestRentalItem {
+	
+	@Autowired
+	private RentalItemService rentalItemService;
+	
+	
+	/* 查詢 租賃項目清單
+	 * 參數: keyword, type
+	 * 回傳: List<RentalItemResponse>
+	 */
+	//@Test
+	public void find() {
+		String keyword = null; // 可換成 "電腦", "4k" 試試
+		String type = null; // 可換成 "教室", "設備" , "場地" 試試
+		var list = rentalItemService.findAll(keyword, type);
+		
+		System.out.println("筆數: " + list.size());
+		list.forEach(System.out::println);
+		
+	}
+	
+	
+	/* 查詢 租賃項目 by id
+	 * 參數: id
+	 * 回傳: RentalItemResponse
+	 */ 
+	//@Test
+	public void findById() {
+		Long id = 1L;
+		try {
+			var rentalItemResponse = rentalItemService.findById(id);
+			System.out.println(rentalItemResponse);
+		} catch (ResourceNotFoundException e) {
+			System.err.println(e);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+		
+	}
+	
+	
+	/* 新增 租賃項目
+	 * 參數: RentalItemRequest
+	 * 回傳: RentalItemResponse
+	 */
+	//@Test
+	public void create() {
+		RentalItemRequest request = new RentalItemRequest();
+		request.setName("椅子");
+		request.setStatus(ItemStatus.AVAILABLE);
+		request.setType("家具");
+		request.setLocation("倉庫");
+		request.setPricePerHour(new BigDecimal("5"));
+		request.setDescription("人體工學");
+		request.setImageUrl("https://enjoycaster.com.tw/wp-content/uploads/2021/12/%E6%A4%8D%E5%B9%B8%E7%A6%8F-%E6%AD%A3-%E5%8E%BB%E8%83%8C-%E9%BB%91-600x900.jpg");
+		
+		var rentalItemResponse = rentalItemService.create(request);
+		System.out.println("新增成功: " + rentalItemResponse);
+	}
+	
+	
+	/* 修改 租賃項目
+	 * 參數: id, RentalItemRequest
+	 * 回傳: RentalItemResponse
+	 */
+	//@Test
+	public void update() {
+		try {
+			RentalItemRequest request = new RentalItemRequest();
+			request.setName("椅子2");
+			request.setStatus(ItemStatus.MAINTENANCE);
+			request.setType("家具2");
+			request.setLocation("倉庫2");
+			request.setPricePerHour(new BigDecimal("2"));
+			request.setDescription("人體工學2");
+			request.setImageUrl("");
+			
+			var rentalItemResponse = rentalItemService.update(6L, request);
+			System.out.println("修改成功: " + rentalItemResponse);
+		} catch (ResourceNotFoundException e) {
+			System.err.println(e);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+		
+	}
+	
+	
+	/* 刪除 租賃項目
+	 * 參數: id
+	 * 回傳: void
+	 */
+	@Test
+	public void delete() {
+		try {
+			Long id = 6L;
+			rentalItemService.delete(id);
+			System.out.println("刪除成功");
+		} catch (ResourceNotFoundException e) {
+			System.err.println(e);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+	}
+	
+}

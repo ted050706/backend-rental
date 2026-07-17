@@ -19,27 +19,23 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 	List<Reservation> findAllByOrderByCreatedAtDesc();
 	
 	@Query("""
-			SELECT COUNT(r) > 0 FROM Reservation r
-			WHERE r.id = :itemId
-				AND r.status IN :statuses
-				AND r.startTime < :newEndDate
-				AND r.endTime > :newStartDate
-			""")
-	boolean exitsOverlap(
-			@Param("itemId") Long itemId,
-			@Param("statuses") Collection<ReservationStatus> statuses,
-			@Param("newEndDate") LocalDateTime newEndDate,
-			@Param("newStartDate") LocalDateTime newStartDate
-			);
+		    SELECT COUNT(r) > 0 FROM Reservation r
+		    WHERE r.item.id = :itemId
+		        AND r.status IN :statuses
+		        AND r.startTime < :newEndTime
+		        AND r.endTime > :newStartTime
+		    """)
+	boolean existsOverlap(
+	    @Param("itemId") Long itemId, 
+	    @Param("statuses") Collection<ReservationStatus> statuses,
+	    @Param("newEndTime") LocalDateTime newEndTime,
+	    @Param("newStartTime") LocalDateTime newStartTime
+	);
 	
-/*	
- // ItemId And Status In  StartTime LessThan And EndTime GreaterThan
-	boolean existsByItemIdAndStatusInStartTimeLessThanAndEndTimeGreaterThan(
-			Long itemId,
-			Collection<ReservationStatus> statuses,
-			LocalDateTime newEndDate,
-			LocalDateTime newStartDate
-			);
-*/
-	
+	boolean existsByItemIdAndStatusInAndStartTimeLessThanAndEndTimeGreaterThan(
+            Long itemId,
+            Collection<ReservationStatus> statuses,
+            LocalDateTime newEndTime,
+            LocalDateTime newStartTime
+    );	
 }

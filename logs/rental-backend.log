@@ -1,1 +1,96 @@
-2026-07-12T14:37:50.665+08:00  WARN 19332 --- [backend-rental] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h35m56s973ms388µs700ns).
+2026-07-17T08:11:31.872+08:00  INFO 23332 --- [backend-rental] [main] c.example.demo.BackendRentalApplication  : Starting BackendRentalApplication using Java 21.0.9 with PID 23332 (C:\Users\User\Documents\workspace-spring-tools-for-eclipse-5.1.0.RELEASE\backend-rental\target\classes started by User in C:\Users\User\Documents\workspace-spring-tools-for-eclipse-5.1.0.RELEASE\backend-rental)
+2026-07-17T08:11:31.879+08:00  INFO 23332 --- [backend-rental] [main] c.example.demo.BackendRentalApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-07-17T08:11:33.147+08:00  INFO 23332 --- [backend-rental] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-17T08:11:33.257+08:00  INFO 23332 --- [backend-rental] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2026-07-17T08:11:34.253+08:00  INFO 23332 --- [backend-rental] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-17T08:11:34.287+08:00  INFO 23332 --- [backend-rental] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-17T08:11:34.288+08:00  INFO 23332 --- [backend-rental] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-07-17T08:11:34.379+08:00  INFO 23332 --- [backend-rental] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-17T08:11:34.380+08:00  INFO 23332 --- [backend-rental] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2423 ms
+2026-07-17T08:11:34.613+08:00  INFO 23332 --- [backend-rental] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-17T08:11:34.679+08:00  INFO 23332 --- [backend-rental] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-07-17T08:11:34.726+08:00  INFO 23332 --- [backend-rental] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-17T08:11:35.078+08:00  INFO 23332 --- [backend-rental] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-17T08:11:35.137+08:00  INFO 23332 --- [backend-rental] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-17T08:11:35.467+08:00  INFO 23332 --- [backend-rental] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76fc5687
+2026-07-17T08:11:35.469+08:00  INFO 23332 --- [backend-rental] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-17T08:11:35.636+08:00  INFO 23332 --- [backend-rental] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-17T08:11:36.712+08:00  INFO 23332 --- [backend-rental] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-17T08:11:37.050+08:00  INFO 23332 --- [backend-rental] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-17T08:11:37.593+08:00  INFO 23332 --- [backend-rental] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-17T08:11:37.594+08:00  WARN 23332 --- [backend-rental] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-17T08:11:37.763+08:00  INFO 23332 --- [backend-rental] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-17T08:11:39.270+08:00  INFO 23332 --- [backend-rental] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-17T08:11:39.282+08:00  INFO 23332 --- [backend-rental] [main] c.example.demo.BackendRentalApplication  : Started BackendRentalApplication in 8.026 seconds (process running for 9.021)
+2026-07-17T08:14:13.097+08:00  INFO 23332 --- [backend-rental] [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-07-17T08:14:13.102+08:00  INFO 23332 --- [backend-rental] [RMI TCP Connection(12)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-17T08:14:13.631+08:00  INFO 23332 --- [backend-rental] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-17T08:14:13.633+08:00 ERROR 23332 --- [backend-rental] [http-nio-8080-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:203) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:383) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:407) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:535) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:70) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:127) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-07-17T08:14:13.649+08:00  INFO 23332 --- [backend-rental] [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-17T08:14:13.652+08:00  INFO 23332 --- [backend-rental] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-17T08:14:13.661+08:00  INFO 23332 --- [backend-rental] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-17T08:14:24.946+08:00  INFO 20200 --- [backend-rental] [main] c.example.demo.BackendRentalApplication  : Starting BackendRentalApplication using Java 21.0.9 with PID 20200 (C:\Users\User\Documents\workspace-spring-tools-for-eclipse-5.1.0.RELEASE\backend-rental\target\classes started by User in C:\Users\User\Documents\workspace-spring-tools-for-eclipse-5.1.0.RELEASE\backend-rental)
+2026-07-17T08:14:24.949+08:00  INFO 20200 --- [backend-rental] [main] c.example.demo.BackendRentalApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-07-17T08:14:25.972+08:00  INFO 20200 --- [backend-rental] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-17T08:14:26.047+08:00  INFO 20200 --- [backend-rental] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2026-07-17T08:14:26.895+08:00  INFO 20200 --- [backend-rental] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-17T08:14:26.913+08:00  INFO 20200 --- [backend-rental] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-17T08:14:26.913+08:00  INFO 20200 --- [backend-rental] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-07-17T08:14:26.968+08:00  INFO 20200 --- [backend-rental] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-17T08:14:26.969+08:00  INFO 20200 --- [backend-rental] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1953 ms
+2026-07-17T08:14:27.198+08:00  INFO 20200 --- [backend-rental] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-17T08:14:27.249+08:00  INFO 20200 --- [backend-rental] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-07-17T08:14:27.292+08:00  INFO 20200 --- [backend-rental] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-17T08:14:27.587+08:00  INFO 20200 --- [backend-rental] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-17T08:14:27.623+08:00  INFO 20200 --- [backend-rental] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-17T08:14:27.809+08:00  INFO 20200 --- [backend-rental] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c5a2d5
+2026-07-17T08:14:27.814+08:00  INFO 20200 --- [backend-rental] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-17T08:14:27.909+08:00  INFO 20200 --- [backend-rental] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-17T08:14:28.898+08:00  INFO 20200 --- [backend-rental] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-17T08:14:29.044+08:00  INFO 20200 --- [backend-rental] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-17T08:14:29.504+08:00  INFO 20200 --- [backend-rental] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-17T08:14:29.505+08:00  WARN 20200 --- [backend-rental] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-17T08:14:29.666+08:00  INFO 20200 --- [backend-rental] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-17T08:14:30.973+08:00  INFO 20200 --- [backend-rental] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-17T08:14:30.982+08:00  INFO 20200 --- [backend-rental] [main] c.example.demo.BackendRentalApplication  : Started BackendRentalApplication in 6.605 seconds (process running for 7.355)
+2026-07-17T08:16:34.891+08:00  INFO 20200 --- [backend-rental] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-07-17T08:16:34.896+08:00  INFO 20200 --- [backend-rental] [RMI TCP Connection(10)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-17T08:16:35.431+08:00  INFO 20200 --- [backend-rental] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-17T08:16:35.432+08:00 ERROR 20200 --- [backend-rental] [http-nio-8080-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:203) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:383) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:407) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:535) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:70) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:127) ~[tomcat-embed-core-10.1.53.jar:10.1.53]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-07-17T08:16:35.442+08:00  INFO 20200 --- [backend-rental] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-17T08:16:35.444+08:00  INFO 20200 --- [backend-rental] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-17T08:16:35.455+08:00  INFO 20200 --- [backend-rental] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
