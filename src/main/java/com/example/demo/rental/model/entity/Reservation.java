@@ -35,7 +35,7 @@ public class Reservation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	/* 
+	/*
 	 * 建立 多對一 關聯（多筆預約紀錄對應同一個使用者）
 	 * fetch = FetchType.LAZY: 設定延遲載入，查詢預約時不會立刻查詢用戶資料，提升效能
 	 * optional = false: 設定此關聯為必填，預約紀錄不能沒有對應的使用者
@@ -60,6 +60,7 @@ public class Reservation {
 	@Column(name = "start_time", nullable = false)
 	private LocalDateTime startTime;
 	
+	// 對應 end_time 欄位，不允許為空，記錄預約結束時間
 	@Column(name = "end_time", nullable = false)
 	private LocalDateTime endTime;
 	
